@@ -1,10 +1,10 @@
 import { AddTask } from "@/components/modules/tasks/AddTask";
 import TasksCard from "@/components/modules/tasks/TasksCard";
 import { selectTasks } from "@/redux/features/task/taskSlice";
-import { useSelector } from "react-redux";
+import { useAppSelector } from "@/redux/middlear/hooks";
 
 const Task = () => {
-  const tasks = useSelector(selectTasks);
+  const tasks = useAppSelector(selectTasks);
   console.log(tasks);
   return (
     <div className="mx-auto max-w-7xl px-5 mt-28">
